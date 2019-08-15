@@ -25,47 +25,42 @@ class ViewController: UIViewController {
                    ["4,000 years", "2,000 years", "3,000 years"],
                    ["1,609 lbs", "1,946 lbs", "2,098 lbs"],
                    ["2%", "3%", "7%"]]
-    
+
     //variables
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
+    var points = 0
     
     //label
     @IBOutlet weak var lbl: UILabel!
+    @IBOutlet weak var displayScore: UILabel!
+
+    
     
     //button
-    
-//    @IBAction func action(_ sender: AnyObject)
-//
-   
-    
-//    {
-//
-//        if (sender.tag == Int(rightAnswerPlacement)) {
-//            print ("Right!!!")
-//        }
-//        else {
-//            print ("Wrong!!!!!")
-//        }
-//        if (currentQuestion != questions.count) {
-//            newQuestion()
-//        }
-//    }
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        newQuestion()
-//    }
-    
     @IBAction func buttonAction(_ sender: UIButton) {
                 if (sender.tag == Int(rightAnswerPlacement)) {
                     print ("Right!!!")
+                    points += 1
+                    print(points)
                 }
                 else {
                     print ("Wrong!!!!!")
                 }
+        
                 if (currentQuestion != questions.count) {
                     newQuestion()
                 }
+                else {
+                    // display score func
+//                    if displayScore.text != nil {
+//                        print("it works")
+//                    }
+                    
+                    finalScore()
+                    performSegue(withIdentifier: "showScore", sender: self)
+        }
+    
     }
     
  //function that displays new question
@@ -94,11 +89,34 @@ class ViewController: UIViewController {
         currentQuestion += 1
     }
 
+
+    
+    @IBOutlet weak var showMessage: UILabel!
+    func finalScore() -> Int {
+        
+        if points >= 6 {
+            print("You are environmentally conscious!🤩 Keep up the good work! We need more people like you, here are some ways you can continue to help!🌍💙")
+        }
+        else if points >= 4 && points < 6 {
+            print("You are trying your best!👍 More than some people can say. Here are some more ways to keep helping the planet!🌿☀️")
+        }
+        else {
+            print("Being harmful to the enviroment is NOT cute!!🙅‍♀️🙅‍♂️ Here are some ways you can stop your bad habits!!☁️🌊")
+        }
+        
+        return points
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
+    
 
 }
 
