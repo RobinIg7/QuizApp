@@ -13,7 +13,6 @@
 		18220BEA23044E4B00035E32 /* QuizApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18220BE823044E4B00035E32 /* QuizApp.xcdatamodeld */; };
 		18220BEC23044E4D00035E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18220BEB23044E4D00035E32 /* Assets.xcassets */; };
 		18220BEF23044E4D00035E32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18220BED23044E4D00035E32 /* LaunchScreen.storyboard */; };
-		18F252372304A3FB00027AE5 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F252362304A3FB00027AE5 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		18220BEB23044E4D00035E32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18220BEE23044E4D00035E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18220BF023044E4D00035E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18F252362304A3FB00027AE5 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 			children = (
 				18220BE123044E4B00035E32 /* AppDelegate.swift */,
 				18220BE323044E4B00035E32 /* ViewController.swift */,
-				18F252362304A3FB00027AE5 /* QuizViewController.swift */,
 				18220BE523044E4B00035E32 /* Main.storyboard */,
 				18220BEB23044E4D00035E32 /* Assets.xcassets */,
 				18220BED23044E4D00035E32 /* LaunchScreen.storyboard */,
@@ -144,7 +141,6 @@
 				18220BE423044E4B00035E32 /* ViewController.swift in Sources */,
 				18220BEA23044E4B00035E32 /* QuizApp.xcdatamodeld in Sources */,
 				18220BE223044E4B00035E32 /* AppDelegate.swift in Sources */,
-				18F252372304A3FB00027AE5 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
