@@ -29,25 +29,35 @@ class ViewController: UIViewController {
     //variables
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
-    var points = 0
+    var points = Int()
+  
+    
+//    var totalPoints = Int()
     
     //label
     @IBOutlet weak var lbl: UILabel!
-    @IBOutlet weak var displayScore: UILabel!
+  
 
     
     
     //button
     @IBAction func buttonAction(_ sender: UIButton) {
+      
+            
                 if (sender.tag == Int(rightAnswerPlacement)) {
                     print ("Right!!!")
                     points += 1
                     print(points)
+                
+                
                 }
                 else {
                     print ("Wrong!!!!!")
                 }
-        
+          
+        //totalPoints = points
+      //  return totalPoints
+
                 if (currentQuestion != questions.count) {
                     newQuestion()
                 }
@@ -57,11 +67,11 @@ class ViewController: UIViewController {
 //                        print("it works")
 //                    }
                     
-                    finalScore()
-                    performSegue(withIdentifier: "showScore", sender: self)
+                    //performSegue(withIdentifier: "showScore", sender: self)
         }
-    
     }
+  
+    
     
  //function that displays new question
     func newQuestion() {
@@ -89,25 +99,36 @@ class ViewController: UIViewController {
         currentQuestion += 1
     }
 
-
-    
-    @IBOutlet weak var showMessage: UILabel!
-    func finalScore() -> Int {
-        
-        if points >= 6 {
-            print("You are environmentally conscious!🤩 Keep up the good work! We need more people like you, here are some ways you can continue to help!🌍💙")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewControllerB = segue.destination as? SecondViewController {
+            viewControllerB.text = String(points)
+            viewControllerB.delegate = self as? SecondViewControllerDelegate
         }
-        else if points >= 4 && points < 6 {
-            print("You are trying your best!👍 More than some people can say. Here are some more ways to keep helping the planet!🌿☀️")
-        }
-        else {
-            print("Being harmful to the enviroment is NOT cute!!🙅‍♀️🙅‍♂️ Here are some ways you can stop your bad habits!!☁️🌊")
-        }
-        
-        return points
         
     }
     
+    @IBAction func submitAnswers(_ sender: Any) {
+    }
+    
+   
+    
+    
+//    func finalScore() -> Int {
+//
+//        if points >= 6 {
+//            print("You are environmentally conscious!🤩 Keep up the good work! We need more people like you, here are some ways you can continue to help!🌍💙")
+//
+//        }
+//        else if points >= 4 && points < 6 {
+//            print("You are trying your best!👍 More than some people can say. Here are some more ways to keep helping the planet!🌿☀️")
+//                    }
+//        else {
+//            print("Being harmful to the enviroment is NOT cute!!🙅‍♀️🙅‍♂️ Here are some ways you can stop your bad habits!!☁️🌊")
+//        }
+//
+//        return points
+//
+//    }
     
     
     override func viewDidLoad() {
@@ -115,8 +136,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-
     
+    
+        
+  
+    
+    
+    
+    
+    
+   
+   
+
 
 }
 
