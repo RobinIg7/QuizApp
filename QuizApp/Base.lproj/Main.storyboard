@@ -195,12 +195,15 @@
                                 <rect key="frame" x="-2291" y="-130" width="2149" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="767-8z-hSU">
-                                <rect key="frame" x="58" y="124" width="299" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="767-8z-hSU">
+                                <rect key="frame" x="20" y="124" width="374" height="160"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="767-8z-hSU" firstAttribute="leading" secondItem="dKf-rC-Cxq" secondAttribute="leading" constant="20" id="LXz-hm-Lbn"/>
+                            <constraint firstItem="dKf-rC-Cxq" firstAttribute="trailing" secondItem="767-8z-hSU" secondAttribute="trailing" constant="20" id="VTp-8S-4dy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dKf-rC-Cxq"/>
                     </view>
                 </viewController>
@@ -373,6 +376,6 @@ Pick up after yourself.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BzW-vt-Sbf"/>
-        <segue reference="uON-mg-bjq"/>
+        <segue reference="4SN-wz-IOq"/>
     </inferredMetricsTieBreakers>
 </document>
